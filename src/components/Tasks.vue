@@ -37,6 +37,7 @@ export default {
   .task{
     position: relative;
     background: #2B2C37;
+    border: 1px solid #3E3F4E;
     margin-bottom: 1em;
     padding: 20px;
     border-radius: 8px;

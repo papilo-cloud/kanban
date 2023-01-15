@@ -1,8 +1,9 @@
 <template>
    <main>
-    <h1>Kanban</h1>
+    <h1><img src="" alt=""> Kanban</h1>
     <p>ALL BOARDS ({{ $store.getters.getState.length }})</p>
     <div class="aside" v-for="bar in $store.getters.getState" :key="bar.id">
+      <img src="../assets/icon-board.svg" alt="">
       <button>{{ bar.name }}</button>
     </div>
   </main>
@@ -29,5 +30,29 @@ export default {
     padding: 20px;
     background: #2B2C37;
     height: 100vh;
+    border-right:1px solid #3E3F4E;
+  }
+  main h1{
+    margin-bottom: 1em;
+  }
+  main p{
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+    color: #aaa;
+  }
+  .aside{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    gap: 10px;
+  }
+  .aside button{
+    background: inherit;
+    font-size: 10px;
+    border: none;
+    letter-spacing: .7px;
+    color: #aaa;
   }
 </style>

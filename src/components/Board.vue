@@ -1,7 +1,7 @@
 <template>
  <div  class="board" v-dragscroll:nochilddrag >
      <div class="main-board" v-for="(column, idx) in $store.getters.getColumn" :key="idx">
-       <p>{{column.name}} ({{ column.tasks.length }})</p>
+       <p><span></span>{{column.name}} ({{ column.tasks.length }})</p>
        <div >
         <Tasks :column="column" />
        </div>
@@ -36,5 +36,16 @@ import Tasks from './Tasks.vue';
   .main-board{
     position: relative;
     width: 280px;
+  }
+  .main-board p{
+    margin-bottom: 20px;
+  }
+  .main-board p span{
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
   }
 </style>

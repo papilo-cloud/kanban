@@ -60,7 +60,7 @@ import SideBar from './components/SideBar.vue';
   grid-template-columns: 280px 1fr;
   background: #20212C;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   overflow: none;
 }
 

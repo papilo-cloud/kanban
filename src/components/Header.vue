@@ -24,4 +24,12 @@ export default {
     align-items: center;
     color: #fff;
   }
+  header button{
+    background: #635FC7;
+    color: #fff;
+    padding: 10px 12px;
+    font-size: 10px;
+    border: none;
+    border-radius: 20px;
+  }
 </style>
