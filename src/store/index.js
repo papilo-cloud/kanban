@@ -9,16 +9,27 @@ export default createStore({
      {name: 'ABU', done: true, id: 2}
     ],
     mainBoard: [data],
-    boardsIndex: 1,
-    boardsColumn: 0
+    boardsIndex: 0,
+    columnIndex: 0,
+    taskIndex: 0,
   },
   getters: {
-    getState(state) {
+    getState(state){
       return state.mainBoard[0].boards
+    },
+    getBoard(state) { 
+      return state.mainBoard[0].boards[state.boardsIndex]
     },
     getColumn(state){
       return state.mainBoard[0].boards[state.boardsIndex].columns
-      // return state.boards[state.boardsIndex].columns[state.selectionColumn]
+    },
+    getTasks(state){
+      return state.mainBoard[0].boards[state.boardsIndex]?.columns[state.columnIndex]?.tasks[
+        state.taskIndex
+      ]
+    },
+    getBoardsName(state){
+      return state.mainBoard[0].boards.map(idx => idx.name)
     }
   },
   mutations: {
