@@ -1,8 +1,10 @@
 <template>
    <main>
-    <h1><img src="" alt=""> Kanban</h1>
-    <p>ALL BOARDS ({{ $store.getters.getState.length }})</p>
-    <div class="aside" v-for="bar in $store.getters.getState" :key="bar.id">
+    <div class="name">
+      <h1><img src="../assets/logo-light.svg" alt="logo"></h1>
+      <p>ALL BOARDS ({{ $store.getters.getState.length }})</p>
+    </div>
+    <div class="aside" v-for="bar in $store.getters.getState" :key="bar.id" :class="{'active': bar.id == $store.state.boardsIndex}">
       <img src="../assets/icon-board.svg" alt="">
       <button>{{ bar.name }}</button>
     </div>
@@ -27,13 +29,18 @@ export default {
   main{
     position: relative;
     width: 100%;
-    padding: 20px;
+    padding: 20px 0;
+    padding-right: 20px;
     background: #2B2C37;
     height: 100vh;
     border-right:1px solid #3E3F4E;
   }
+  main .name{
+    padding: 0 20px;
+  }
   main h1{
     margin-bottom: 1em;
+    padding: 0;
   }
   main p{
     letter-spacing: 1px;
@@ -44,9 +51,13 @@ export default {
     position: relative;
     width: 100%;
     display: flex;
+    padding: 12px 20px;
     align-items: center;
-    margin-bottom: 1em;
+    border-radius: 0 40px 40px 0;
     gap: 10px;
+  }
+  .active{
+    background-color: #635FC7;
   }
   .aside button{
     background: inherit;
@@ -54,5 +65,6 @@ export default {
     border: none;
     letter-spacing: .7px;
     color: #aaa;
+    cursor: pointer;
   }
 </style>

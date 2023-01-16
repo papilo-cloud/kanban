@@ -1,6 +1,8 @@
 <template>
   <div class="app">
-    <side-bar />
+    <div class="side-bar">
+      <side-bar />
+    </div>
     <div class="over">
       <Header/>
       <div class="overflow">
@@ -63,7 +65,11 @@ import SideBar from './components/SideBar.vue';
   font-size: 12px;
   overflow: none;
 }
-
+.side-bar{
+  /* display: none; */
+  position: relative;
+  /* left: -100%; */
+}
 
 .overflow, .over{
   overflow: auto;

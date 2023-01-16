@@ -2,7 +2,8 @@
   <header>
         <h2>Platform Launch</h2>
         <div>
-            <button>+Add New Task</button> I
+            <button>+Add New Task</button> 
+           <button> <img src="../assets/icon-vertical-ellipsis.svg" alt="ellipsis"></button>
         </div>
   </header>
 </template>
@@ -24,7 +25,18 @@ export default {
     align-items: center;
     color: #fff;
   }
+  header div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   header button{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  header button:nth-child(1){
     background: #635FC7;
     color: #fff;
     padding: 10px 12px;

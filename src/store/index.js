@@ -3,11 +3,6 @@ import data from '../datas/data.json';
 
 export default createStore({
   state: {
-    index: [
-     { name: 'Jonh', done: false, id:0},
-      {name: 'Doe', done: true, id: 1},
-     {name: 'ABU', done: true, id: 2}
-    ],
     mainBoard: [data],
     boardsIndex: 0,
     columnIndex: 0,
